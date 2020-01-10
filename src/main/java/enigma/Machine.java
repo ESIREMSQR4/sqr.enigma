@@ -1,19 +1,26 @@
 package enigma;
 
 public class Machine {
+	/*
+	 * La Classe machine sera utilisée pour chiffrer et déchiffrer nos messages
+	 * 
+	 */
 
 	private Rotor leftRotor;
 	private Rotor middleRotor;
 	private Rotor rightRotor;
 	private Reflector reflector;
 
+	//On initialise la machine en créant nos trois roue et les réflecteur
 	public void initRotors(Reflector reflector, Rotor left, Rotor middle, Rotor right) {
 		this.reflector = reflector;
 		leftRotor = left;
 		middleRotor = middle;
 		rightRotor = right;
 	}
-
+	
+	//On entre la clé de chiffrement
+	// Cette clé va déterminer la position des roues
 	public void setPositions(String setting) {
 		char[] charSettings = setting.toCharArray();
 		reflector.setPosition(Rotor.toIndex(charSettings[0]));
