@@ -16,14 +16,26 @@ Code for the German Enigma machine used in WW2.
 ## Functions to be tested
 Hereafter, for each classes give function to be tested. Remember that all functions does not have to be tested, some code can be checked by a simple inspection or an analyse, another code can be validated by definition (rules, etc) the others function can be tecsted by unit tests, integration tests or validation tests (IADT: Inspect, Analyse, Define, Test). 
 
+
+
 ### Classe Machine
 #### functions
+	-convert(String msg)
+	-convertCher(char c)
 
 ### Classe Reflector
 #### functions
+	-convertForward(int p)
+
 
 ### Classe Rotor
 #### functions
+	- convertForward(int p)
+	- convertBackward(int e)
+	- toLetter(int p)
+	- toIndex(char c)
+	
+	On ne va pas directement tester les méthodes void. On peut les exécuté et tester par la suite certains attributs qu'elles devraient modifier. PAr exemple la méthode advance() doit incrémenter la position de la roue qui l'exécute.
 
 ## Tricks & tips
 
